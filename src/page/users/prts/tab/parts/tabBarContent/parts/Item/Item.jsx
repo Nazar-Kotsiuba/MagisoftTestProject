@@ -14,14 +14,14 @@ export const Item = ({firstName, lastName, avatar, id, user, btnStatus}) => {
     return (
         <div className={styles.Wrapper}>
             <Link to={{pathname: `${RoutersConfig.user}/${id}`, state: {id: id}}}>
-                <span onClick={() => {
+                <span className={styles.element} onClick={() => {
                     dispatch(selectUserAC(user))
                 }}><img src={avatar} alt=""/></span>
             </Link>
-            <span>{id}</span>
-            <span>{firstName}</span>
-            <span>{lastName}</span>
-            <span className={styles.bntAndTime}>
+            <span className={styles.element}>{id}</span>
+            <span className={styles.element}>{firstName}</span>
+            <span className={styles.element}>{lastName}</span>
+            <span  className={styles.bntAndTime}>
                 {
                     btnStatus
                     &&

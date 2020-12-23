@@ -1,7 +1,8 @@
 .Wrapper{
   display: flex;
+
   width: 600px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 5px 10px ;
 }
@@ -21,4 +22,12 @@
     display: block;
     padding: 5px;
   }
+
+
+}
+
+.element{
+  width: 110px;
+  font-size: 15px;
+
 }
