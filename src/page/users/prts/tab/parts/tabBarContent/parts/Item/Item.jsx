@@ -28,7 +28,7 @@ export const Item = ({firstName, lastName, avatar, id, user, btnStatus}) => {
                     <span className={styles.bnt} onClick={() => {
                         dispatch(markedUserAC(id))
                         setTime(getTime())
-                    }}>тметить пользователя</span>
+                    }}>отметить пользователя</span>
                 }
 
                 <span className={styles.time}>{time}</span>

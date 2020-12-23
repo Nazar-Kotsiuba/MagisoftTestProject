@@ -13,7 +13,7 @@ export const Users = () => {
 
     let data = [
         {
-            name: 'all users',
+            name: 'All users',
             id: '1',
             data: allUsers
         },

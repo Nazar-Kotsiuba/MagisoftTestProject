@@ -30,7 +30,7 @@ export const Header = (props) => {
     return (
         <div className={styles.Wrapper}>
             <div className={styles.time}>{time}</div>
-            <div  className={styles.userCount}>Отмеченые пользователи : {MarkedUsersLength}</div>
+            <div  className={styles.userCount}>Отмеченные пользователи : {MarkedUsersLength}</div>
             {
                 selectUser
                     ? <Link className={styles.btn} to={RoutersConfig.usersList} onClick={() => {
