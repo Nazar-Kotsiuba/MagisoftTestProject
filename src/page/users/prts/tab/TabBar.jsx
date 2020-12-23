@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 
 import {TabBarNav} from './parts/tabBarNav/TabBarNav'
 import {TabBarContent} from './parts/tabBarContent/TabBarContent'
+import{getUsersAC} from '../../../../state/action'
 import styles from './TabBar.module.scss'
 
 export const TabBar = ({settings}) => {
@@ -28,7 +29,7 @@ export const TabBar = ({settings}) => {
 
             <TabBarContent data={data} btnStatus={selectTab === settings[0].id}/>
             {selectTab === settings[0].id
-                ? <button onClick={() => dispatch({type: 'GET_ZAPROS'})}>Добавить еще</button>
+                ? <button onClick={() => dispatch(getUsersAC())}>Добавить еще</button>
                 : null}
         </div>
     )
