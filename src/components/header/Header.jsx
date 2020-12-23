@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 
 import {selectUserAC} from '../../state/action'
-import {getSelectUser} from '../../state/selectors'
+import {getSelectUser, getMarkedUsersLength} from '../../state/selectors'
 import {RoutersConfig} from '../../routes/routeConfig'
 import {getTime} from '../../helpers/utils'
 import styles from './Header.module.scss'
@@ -13,6 +13,7 @@ export const Header = (props) => {
 
     const [time, setTime] = useState('')
     const selectUser = useSelector(getSelectUser)
+    const MarkedUsersLength = useSelector(getMarkedUsersLength)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -25,15 +26,17 @@ export const Header = (props) => {
         }
     }, [])
 
+
     return (
         <div className={styles.Wrapper}>
             <div className={styles.time}>{time}</div>
+            <div  className={styles.userCount}>Отмеченые пользователи : {MarkedUsersLength}</div>
             {
                 selectUser
                     ? <Link className={styles.btn} to={RoutersConfig.usersList} onClick={() => {
                         dispatch(selectUserAC(null))
                     }}>Назад</Link>
-                    : null
+                    : <div className={styles.emptyBlock}/>
             }
         </div>
     )

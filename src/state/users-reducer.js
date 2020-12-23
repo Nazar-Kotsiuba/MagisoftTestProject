@@ -14,6 +14,8 @@ export const userReducer = (state = initialState, action) => {
 
         }
         case MARKED_USER: {
+            const check = state.markedUsers.find(el => el.id.value === action.id)
+            if(check){return state}
             const user = state.allUsers.find(el => el.id.value === action.id)
             return {...state, markedUsers: [...state.markedUsers, user]}
         }
