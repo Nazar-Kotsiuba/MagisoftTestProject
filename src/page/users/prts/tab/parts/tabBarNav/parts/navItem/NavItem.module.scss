@@ -1,0 +1,13 @@
+.navItem{
+  display: inline-block;
+  background: rgba(200, 200, 203, 0.61);
+  padding: 10px 150px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.activeItem{
+  background: rgba(51, 71, 172, 0.87);
+}

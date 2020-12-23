@@ -1,0 +1,15 @@
+.Wrapper{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto ;
+
+  .inputSearch{
+    margin: 10px 0;
+    padding: 0 3px;
+    width: 200px;
+    height: 25px;
+  }
+}
+
