@@ -1,4 +1,9 @@
+.wrapper{
+    margin: 100px;
+}
+
 .userIfo{
     display: flex;
     flex-direction: column;
+
 }
